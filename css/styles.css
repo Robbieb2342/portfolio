@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+header{
+    position: relative;
+    background: url('../img/lake-6003746_1920.jpg');
+}
+
+.hero * {
+    z-index: 10;
+}
+
+header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f6f9;
+    height: 50px;
+    opacity: 0.4;
+   
+}
+
+
+.navbar ul{
+    
+    display: flex;
+    justify-content:space-between;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.navbar li{
+    z-index: 100;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    padding: 0 16px;
+    color: rgb(6, 7, 19);
+    transition: all 0.25s;
+    
+}
+
+.nav-items ul li a{
+   
+    text-decoration: none;
+} 
+ 
+
+.navbar .icons:hover{
+    background:#fff;
+    
+    border-radius: 50%;
+}
+    
+
+
+.nav-logo h1{
+    font-size: 24px;
+    font-family: 'Shippori Mincho', serif;
+    text-decoration: none;
+    color: rgb(6, 7, 19);
+    margin-left: 40px;    
+}
+
+
+.navbar li:hover{
+    color: #276678;
+    text-decoration: underline;
+}
+
+
+.fa-cog {
+    color: rgb(6, 7, 19);
+}
+
+
+/* Burger Menu */
+
+.hamburger{
+    display: none;
+}
+
+.burger-menu{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: 320px;
+    width: 200px;
+    opacity: .7;
+    background: rgb(241, 246, 249);
+    border-radius: 0 0 0 8px;
+    transform: translateX(200px); 
+    display: none;
+}
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
+/* .burger-menu ul{
+    display: none;
+} */
+
+.toggle{
+    display: block;
+    visibility:visible;
+    transform: translateX(0);
+    transition: all 1s ease-in;
+    z-index: 100;
+}
+
+
+.burger-menu ul li{
+    list-style: none;
+    text-align: center;
+    padding: 25px;
+    
+}
+
+.burger-menu ul li a{
+    font-weight: 100;
+    font-size: 20px;
+    font-family: 'Shippori Mincho', serif;
+    color: #276678;
+    text-decoration: none;
+}
+
+
+
+/* Main Content */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-content h1{
+    font-weight: 100;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color:#fff;
+}
+
+.main-content p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color:#fff;
+}
+
+
+
+.btn{
+    font-family: 'Shippori Mincho', serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(90, 92, 214);
+    border-radius: 7px;
+    padding: 8px 30px;
+    background: #f1f1ed;
+}
+
+.btn:hover{
+    background:#e0e0db ;
+    color: rgb(23, 24, 119);
+    
+}
+
+
+#about{
+    display: flex;
+    justify-content: center;
+}
+
+#about .about-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px auto;
+    width: 50%;
+}
+
+#about .about-container img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    float: right;
+}
+
+#about .about-container h2,p{
+    
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 100;
+
+}
+
+
+
+/* Footer */
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #9eb7c5;
+    height: 94px;
+    width: 100%;
+    opacity: .8;
+    overflow: hidden;
+}
+
+.footer p{
+    margin-top:5px;
+    color: rgb(6, 7, 19);
+    
+}
+
+.footer .fa-cog {
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: rgb(6, 7, 19);
+}
+
+
+
+.footer .fa-cog:hover {
+    
+    color: rgb(90, 92, 214);
+}
+
+.footer-socials a{
+    padding: 0 8px;
+    margin-bottom: 2px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

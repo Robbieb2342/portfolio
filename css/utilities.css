@@ -1,0 +1,137 @@
+/* Burger Menu */
+
+.hamburger{
+    display: none;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+}
+
+.line{
+    opacity: 0;
+}
+
+.burger-menu{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    /* height: 320px;*/
+    width: 200px; 
+    opacity: .7;
+    background: rgb(241, 246, 249);
+    border-radius: 0 0 0 8px;
+    animation: menu-content 1s forwards ease-in-out;
+    
+}
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
+.burger-menu ul{
+    display: block;
+    /* opacity: 0; */
+    animation: burger-menu 0.5s forwards ease-in-out;
+    animation-delay: 0.6s;
+}
+
+.toggle{
+    display: block;
+    visibility:visible;
+    
+    transition: all 1s ease-in;
+    animation: menu 1s forwards ease-in-out;
+    z-index: 100;
+}
+
+
+.menu-line1{
+    top: 0;
+    transform: rotate(135deg);
+    transition: 0.5s ease-in-out;
+}
+
+
+.menu-line2{
+    display: none;
+}
+.menu-line3{
+    position: absolute;
+    top: 11px;
+    transition: 0.5s ease-in-out;
+    transform: rotate(-135deg);
+}
+
+.burger-menu ul li{
+    list-style: none;
+    text-align: center;
+    padding: 25px;
+    
+}
+
+.burger-menu ul li a{
+    font-weight: 100;
+    font-size: 20px;
+    font-family: 'Shippori Mincho', serif;
+    color: #276678;
+    text-decoration: none;
+    opacity: 0;
+    animation: dropdown 1.5s forwards ease-in-out;
+}
+
+.line1{width:18px; height: 2px; background-color: #000;}
+.line2{width:18px; height: 2px; background-color: #000;}
+.line3{width:18px; height: 2px; background-color: #000;}
+
+
+
+@keyframes menu{
+    from{
+        
+        height: 0;
+    } 
+    to{
+        
+        height: 320px;
+    }
+}
+@keyframes burger-menu{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes dropdown{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .hamburger{
+        display: flex;
+    }
+    .hamburger-items li a{
+        display: none;
+    }
+    .burger-menu{
+        position: fixed;
+    }
+    .line{
+        opacity: 1;
+    } 
+}
